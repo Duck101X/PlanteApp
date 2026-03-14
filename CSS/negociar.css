@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo geral */
+body {
+    background-color: #FEFBF0;
+    color: #2e7d32;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #1b5e20;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.logo a:hover {
+    color: #012701;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1b5e20;
+    font-weight: 500;
+    font-size: 20px;
+    gap: 1rem;
+}
+
+nav a:hover {
+    color: #012701;
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 20px;
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+/* Título */
+main h1 {
+    margin-top: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1b5e20;
+}
+
+/* Seção de informações da planta */
+.planta-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planta-info p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.planta-info p strong {
+    color: #1b5e20;
+}
+
+.planta-info img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão "Voltar" */
+.botao {
+    background-color: #1b5e20;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
+    align-self: center; /* Alinha o botão ao centro da coluna */
+}
+
+.botao:hover {
+    background-color: #43a047;
+}
+

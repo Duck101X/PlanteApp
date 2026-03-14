@@ -1,0 +1,209 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    
+    body {
+      background-color: #FEFBF0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #003300;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+
+
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color:  #1b5e20;
+      font-size: 20px;
+      font-weight: 600;
+      gap: 1rem;
+    }
+
+    nav a:hover {
+      color: #012701;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    h2 {
+      color: #036b03;
+      
+      margin-top: 10px;
+      padding: 10px 25px;
+      border-radius: 20px;
+    }
+
+    form {
+    
+    padding: 2rem;
+    border-radius: 10px;
+    width: 370px;
+    min-height: 360px;
+    overflow-y: auto;
+    margin-top: 1px;
+    padding-top: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 1rem;
+      border: 1px solid #666666;
+      border-radius: 10px;
+      background-color: transparent;
+    }
+
+    button:not(.btn-olho) {
+      margin-top: 20px;
+      height: 55px;
+      width: 100%;
+      padding: 15px;
+      background-color: #004d00;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    
+      font-size: 18px;
+    }
+
+    button:not(.btn-olho):hover {
+      background-color: #003300;
+      cursor: pointer;
+    }
+
+    .logo a {
+    font-size: 2rem;         
+    font-weight: bold;      
+    color:  #1b5e20;          
+    text-decoration: none;   
+    margin-left: 0.5rem;     
+    letter-spacing: 1px;     
+    transition: color 0.2s;
+    }
+
+    .logo a:hover {
+    color: #012701;
+  
+    }
+    
+    .btn-olho {
+      position: absolute;
+      right: 10px;
+      top: 38%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .btn-olho img {
+    width: 26px;   
+    height: 20px; 
+    }
+
+    #icone-olho {
+    transition: opacity 0.2s;
+    } 
+
+    .cada {
+      width: auto;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    height: 35px;
+    margin-right: 0.3rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin-left: 0;
+    padding: 5px;
+  }
+
+  .container {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+
+  form {
+    width: 100%;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  button:not(.btn-olho) {
+    height: 50px;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .btn-olho {
+    top: 35%;
+    right: 8px;
+  }
+
+  .btn-olho img {
+    width: 22px;
+    height: 18px;
+  }
+}

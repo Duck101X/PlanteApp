@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo geral */
+body {
+  background-color:  #FEFBF0;
+  color: #2e7d32;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #1b5e20; /* ou a cor que preferir */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  
+}
+
+.logo a:hover {
+  color:#012701;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color:  #1b5e20;
+  font-weight: 500;
+  font-size: 20px;
+  gap: 1rem;
+}
+
+nav a:hover {
+  color: #012701;
+}
+
+/* Conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 20px;
+}
+
+/* Título */
+main h1 {
+  margin-top: 10px;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color:  #1b5e20;
+}
+
+.plantamini {
+  /* Seu estilo aqui */
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Formulário */
+form {
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Campos do formulário */
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  height: 50px;
+  border: 1px solid #224523;
+  border-radius: 10px;
+  font-size: 16px;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+}
+
+#dinheiro-container label,
+#troca-container label {
+  display: block;
+  margin-bottom: 8px; /* Espaço entre o label e o input */
+}
+
+#dinheiro-container input,
+#troca-container textarea {
+  display: block;
+  margin-bottom: 12px; /* Espaço abaixo do input/textarea */
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 40px;
+}
+
+/* Botão */
+form button {
+  background-color:  #1b5e20;;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #43a047;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .logo img {
+    height: 35px;
+    margin-right: 0.3rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  main {
+    margin: 20px 10px;
+  }
+
+  main h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  form textarea {
+    min-height: 60px;
+  }
+
+  form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

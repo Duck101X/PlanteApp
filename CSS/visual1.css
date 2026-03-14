@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
+/* Base */
+body {
+  background-color: #FEFBF0;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  color: #003200;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 30px;
+
+  gap: 2rem;
+}
+
+/* Título do cabeçalho */
+h1 {
+  color: #1b5e20;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Navegação */
+ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  padding: 10;
+  margin-right: 50px;
+
+}
+
+ul a {
+  font-size: 1.4rem;
+  color: #1b5e20;;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+ul a:hover {
+  color: #001f00;
+}
+
+/* Logo + Título */
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto; /* Mantém a proporção */
+
+}
+
+
+div {
+  text-align: center;
+}
+
+.botaoProduto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1b5e20;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Botão estilo link */
+.mapa {
+  color: ghostwhite;
+  background-color: #046f04;
+  border: 2px solid #046f04;
+  border-radius: 8px;
+  padding: 15px 50px;
+  font-size: 1.4rem;
+  font-weight: 450;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mapa:hover {
+  background-color: #025902;
+}
+
+.img-plantas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+}
+
+
+.img-plantas img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Subtítulo central */
+h2 {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #005100;
+}
+
+/* Imagem decorativa inferior */
+.plantamini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.plantamini img {
+  width: 120px;
+  height: auto;
+}
+
+/* Adicione estas classes ou ajuste as existentes */
+
+.search-container {
+    display: flex;
+    flex-direction: column; /* Coloca input e botão um abaixo do outro no mobile */
+    gap: 10px; /* Espaçamento entre os elementos */
+    padding: 0 15px; /* Adiciona padding lateral (se não estiver no body) */
+    width: 100%; /* Garante que o container use toda a largura */
+    box-sizing: border-box; /* Garante que o padding não cause estouro */
+}
+
+.search-input, .search-button {
+    width: 100%;
+    /* Adicione box-sizing: border-box; se tiver padding interno */
+    box-sizing: border-box; 
+}
+
+
+@media (max-width: 768px) {
+    
+    /* 1. Reset Global e Body */
+    body {
+        /* Remove o padding fixo para que os containers de largura total (como header e busca) funcionem */
+        padding: 0; 
+    }
+
+    /* 2. Cabeçalho (Header) */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px; /* Padding vertical e um pouco horizontal */
+        gap: 0.5rem;
+    }
+
+    .logo-titulo {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+        padding: 0;
+    }
+
+    .logo {
+        height: 30px;
+    }
+    
+    /* Navegação */
+    ul {
+        /* Navegação horizontal e centralizada é mais compacta no mobile */
+        flex-direction: row; 
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul a {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+    
+    /* 3. Títulos e Chamadas */
+    h2 {
+        font-size: 1.8rem; /* Subtítulo mais compacto */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem; /* Tamanho bom para a mensagem de boas-vindas */
+    }
+
+    /* Botão 'Ver mapa' */
+    .mapa {
+        padding: 10px 30px;
+        font-size: 1.2rem;
+    }
+
+    /* 4. Correção da Barra de Pesquisa */
+    .search-bar {
+        width: 100%;
+        /* ESSENCIAL: Adiciona o espaçamento lateral aqui, garantindo que a barra
+           ocupe 100% - 30px de padding, evitando o corte. */
+        padding: 0 15px; 
+        box-sizing: border-box; 
+        display: flex;
+        flex-direction: column; /* Input e botão um abaixo do outro */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .search-bar input[type="text"], 
+    .search-bar button[type="submit"] {
+        width: 100%; 
+        /* Garante que o padding/border não extrapolem os 100% da largura */
+        box-sizing: border-box; 
+        padding: 12px; /* Aumenta o padding para ser mais fácil de tocar */
+        font-size: 1rem;
+        border-radius: 8px; /* Borda mais arredondada */
+        /* Pode ser necessário definir cor/borda se não estiver em visual1.css */
+    }
+    
+    /* 5. Imagens e Espaçamentos */
+    .img-plantas {
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Separador visual */
+    hr {
+        margin: 20px 15px; /* Adiciona margem lateral ao separador */
+    }
+
+    .plantamini {
+        margin-top: 2rem;
+    }
+
+    .plantamini img {
+        width: 80px;
+    }
+    
+    /* 6. Cards de Produtos (Container do Feed) */
+    .container {
+        /* Adiciona padding lateral para que o conteúdo não cole nas bordas */
+        padding: 0 15px; 
+    }
+    
+    /* Se você tiver uma classe para os cards individuais: */
+    /* .card-planta { 
+        max-width: 100%;
+        margin: 15px 0;
+    } */
+}
