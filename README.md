@@ -58,39 +58,73 @@ JavaScript (Fetch API)
 📂 Estrutura do Projeto
 
 PLANTEAPP
+
 │
+
 ├── CSS
+
 │   ├── BlocoProduto.css
+
 │   ├── cadastrar-planta.css
+
 │   ├── cadastro.css
+
 │   ├── listar-plantas.css
+
 │   ├── Login.css
+
 │   ├── negociar.css
+
 │   └── visual1.css
+
 │
+
 ├── img
+
 │
+
 ├── Login
+
 │   ├── cadastro.php
+
 │   ├── config.php
+
 │   ├── home.php
+
 │   ├── login.php
+
 │   ├── sair.php
+
 │   └── testelogin.php
+
 │
+
 ├── Planta
+
 │   ├── buscar-plantas.php
+
 │   ├── cadastrar-planta.php
+
 │   ├── editar-planta.php
+
 │   ├── excluir-planta.php
+
 │   ├── listar-plantas.php
+
 │   ├── negociar.php
+
 │   ├── processa-planta.php
+
 │   ├── saveEdit.php
+
 │   └── uploads
+
 │
+
 ├── index.php
+
 ├── negociar-index.php
+
 └── buscar-plantas-index.php
 
 🗄 Banco de Dados
