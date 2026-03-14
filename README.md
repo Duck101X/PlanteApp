@@ -56,6 +56,7 @@ CSS3
 JavaScript (Fetch API)
 
 📂 Estrutura do Projeto
+
 PLANTEAPP
 │
 ├── CSS
@@ -91,6 +92,7 @@ PLANTEAPP
 ├── index.php
 ├── negociar-index.php
 └── buscar-plantas-index.php
+
 🗄 Banco de Dados
 
 O sistema utiliza MySQL com duas tabelas principais:
