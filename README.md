@@ -63,9 +63,10 @@ Relacionamento: Possui uma Chave Estrangeira (usuario_id) que vincula cada plant
 Clonar o repositório:
 ```
 Bash
-git clone [https://github.com/seu-usuario/planteapp.git](https://github.com/seu-usuario/planteapp.git)
-Configurar o Servidor Local:
+git clone https://github.com/Duck101X/PlanteApp.git
 ```
+Configurar o Servidor Local:
+
 Mova a pasta do projeto para htdocs (XAMPP) ou www (Wamp).
 
 Importar o Banco de Dados:
