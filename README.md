@@ -48,6 +48,8 @@ PLANTEAPP
 │   └── uploads/      # Pasta de destino das fotos das plantas
 ├── index.php         # Página inicial (Landing Page)
 └── sql/              # Arquivos de exportação do Banco de Dados
+```
+
 🗄️ Modelagem do Banco de Dados
 O sistema utiliza MySQL com duas tabelas relacionadas:
 
@@ -59,11 +61,11 @@ Relacionamento: Possui uma Chave Estrangeira (usuario_id) que vincula cada plant
 
 ⚙️ Instalação e Configuração
 Clonar o repositório:
-
+```
 Bash
 git clone [https://github.com/seu-usuario/planteapp.git](https://github.com/seu-usuario/planteapp.git)
 Configurar o Servidor Local:
-
+```
 Mova a pasta do projeto para htdocs (XAMPP) ou www (Wamp).
 
 Importar o Banco de Dados:
@@ -75,11 +77,12 @@ Importe os arquivos SQL inclusos no projeto.
 Ajustar Conexão:
 
 Verifique o arquivo Login/config.php e insira suas credenciais locais:
+```
 
 PHP
 $conexao = new mysqli("localhost", "seu_root", "sua_senha", "cadastro");
 Executar:
-
+```
 Acesse: http://localhost/planteapp
 
 📱 Fluxo de Uso
