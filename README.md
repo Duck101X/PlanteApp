@@ -1,260 +1,97 @@
-# 🌱 PlanteApp
+# 🌿 PlanteApp - Conectando Cultivadores
 
-O PlanteApp é uma plataforma web desenvolvida em PHP, HTML, CSS e MySQL que permite aos usuários doar, trocar ou vender mudas e plantas.
-O sistema conecta pessoas interessadas em jardinagem, facilitando o contato entre usuários através do telefone informado no anúncio.
+O **PlanteApp** é uma plataforma Full Stack desenvolvida para entusiastas da botânica. O sistema facilita o descarte consciente e a aquisição de novas espécies através de um sistema de anúncios para doação, troca ou venda de mudas e plantas.
 
-⚠️ Importante:
-A negociação não acontece dentro da plataforma. O site apenas exibe o telefone do usuário para que as partes entrem em contato diretamente.
+---
 
-📸 Demonstração
+## 📖 Sobre o Projeto
 
-Página inicial do sistema com:
+O sistema funciona como uma vitrine virtual. O foco é a **sustentabilidade e o cultivo urbano**. 
 
-Destaques de plantas
+> ⚠️ **IMPORTANTE:** A negociação não acontece dentro da plataforma. O site atua como uma ponte, exibindo o contato direto (telefone) do anunciante para que as partes finalizem o acordo externamente (via WhatsApp ou ligação).
 
-Sistema de busca
+---
 
-Cards com informações das plantas
+## 🚀 Funcionalidades Principais
 
-Botão para negociar
+### 👤 Gestão de Usuários
+- Cadastro e Login com sistema de autenticação.
+- Controle de acesso e encerramento de sessão (Logout).
 
-🚀 Funcionalidades
+### 🌿 Gestão de Plantas
+- **CRUD Completo:** Criar, Listar, Editar e Excluir anúncios de plantas.
+- **Upload de Imagens:** Processamento e armazenamento de fotos das mudas.
+- **Categorização de Oferta:** Opções para Doar, Trocar ou Vender (com suporte a preços ou itens de troca).
 
-✔ Cadastro de usuários
-✔ Login de usuários
-✔ Cadastro de plantas
-✔ Upload de foto da planta
-✔ Escolha da ação:
+### 🔍 Inteligência de Busca
+- **Busca Dinâmica (Assíncrona):** Filtro em tempo real utilizando **JavaScript (Fetch API)** para localizar plantas por nome, tipo ou descrição sem recarregar a página.
 
-Doar
+---
 
-Trocar
+## 🛠 Tecnologias Utilizadas
 
-Vender
+- **Front-end:** HTML5, CSS3 (Design Responsivo), JavaScript (Fetch API).
+- **Back-end:** PHP 8.x.
+- **Banco de Dados:** MySQL / MariaDB.
+- **Ambiente de Desenvolvimento:** XAMPP / WampServer.
 
-✔ Busca de plantas por:
+---
 
-Nome
+## 📂 Estrutura do Projeto
 
-Tipo
+```text
+PLANTEAPP
+├── CSS/              # Estilos modulares (Login, Cadastro, Listagem)
+├── img/              # Ativos visuais estáticos do site
+├── Login/            # Lógica de autenticação e configuração do BD
+├── Planta/           # Processamento do CRUD e buscas
+│   └── uploads/      # Pasta de destino das fotos das plantas
+├── index.php         # Página inicial (Landing Page)
+└── sql/              # Arquivos de exportação do Banco de Dados
+🗄️ Modelagem do Banco de Dados
+O sistema utiliza MySQL com duas tabelas relacionadas:
 
-Descrição
+Tabela cadastro: Gerencia os usuários (ID, Nome, Email, Senha).
 
-✔ Visualização da planta com detalhes
-✔ Contato direto com o dono da planta
+Tabela plantas: Armazena os anúncios.
 
-🛠 Tecnologias utilizadas
+Relacionamento: Possui uma Chave Estrangeira (usuario_id) que vincula cada planta ao seu respectivo dono na tabela de usuários.
+
+⚙️ Instalação e Configuração
+Clonar o repositório:
+
+Bash
+git clone [https://github.com/seu-usuario/planteapp.git](https://github.com/seu-usuario/planteapp.git)
+Configurar o Servidor Local:
+
+Mova a pasta do projeto para htdocs (XAMPP) ou www (Wamp).
+
+Importar o Banco de Dados:
+
+No phpMyAdmin, crie um banco de dados chamado cadastro.
+
+Importe os arquivos SQL inclusos no projeto.
+
+Ajustar Conexão:
+
+Verifique o arquivo Login/config.php e insira suas credenciais locais:
 
 PHP
+$conexao = new mysqli("localhost", "seu_root", "sua_senha", "cadastro");
+Executar:
 
-MySQL / MariaDB
+Acesse: http://localhost/planteapp
 
-HTML5
+📱 Fluxo de Uso
+Anúncio: O usuário cadastra a planta e faz o upload da foto.
 
-CSS3
+Interesse: Outro usuário utiliza a busca dinâmica para filtrar o que deseja.
 
-JavaScript (Fetch API)
+Negociação: Ao clicar em "Negociar", os detalhes e o telefone de contato são exibidos.
 
-📂 Estrutura do Projeto
+Contato: A comunicação final ocorre fora do ambiente web.
 
-PLANTEAPP
+🌿 Objetivo
+Incentivar o cultivo urbano e promover a economia circular de mudas de forma simples e eficiente.
 
-│
-
-├── CSS
-
-│   ├── BlocoProduto.css
-
-│   ├── cadastrar-planta.css
-
-│   ├── cadastro.css
-
-│   ├── listar-plantas.css
-
-│   ├── Login.css
-
-│   ├── negociar.css
-
-│   └── visual1.css
-
-│
-
-├── img
-
-│
-
-├── Login
-
-│   ├── cadastro.php
-
-│   ├── config.php
-
-│   ├── home.php
-
-│   ├── login.php
-
-│   ├── sair.php
-
-│   └── testelogin.php
-
-│
-
-├── Planta
-
-│   ├── buscar-plantas.php
-
-│   ├── cadastrar-planta.php
-
-│   ├── editar-planta.php
-
-│   ├── excluir-planta.php
-
-│   ├── listar-plantas.php
-
-│   ├── negociar.php
-
-│   ├── processa-planta.php
-
-│   ├── saveEdit.php
-
-│   └── uploads
-
-│
-
-├── index.php
-
-├── negociar-index.php
-
-└── buscar-plantas-index.php
-
-🗄 Banco de Dados
-
-O sistema utiliza MySQL com duas tabelas principais:
-
-Tabela cadastro
-
-Armazena os usuários do sistema.
-
-Campos principais:
-
-id
-
-Nome
-
-Email
-
-Senha
-
-Tabela plantas
-
-Armazena os anúncios de plantas.
-
-Campos principais:
-
-idplantas
-
-nome
-
-tipo
-
-telefone
-
-descricao
-
-foto
-
-opcao (doar, trocar, vender)
-
-preco
-
-usuario_id
-
-troca
-
-Existe uma chave estrangeira ligando plantas ao usuário.
-
-⚙️ Instalação
-1️⃣ Clonar o repositório
-git clone https://github.com/seu-usuario/planteapp.git
-2️⃣ Colocar no servidor local
-
-Coloque a pasta dentro do:
-
-xampp/htdocs/
-
-ou
-
-wamp/www/
-3️⃣ Criar banco de dados
-
-No phpMyAdmin:
-
-Crie um banco chamado:
-
-cadastro
-
-Importe os arquivos SQL:
-
-cadastro_cadastro.sql
-
-cadastro_plantas.sql
-
-4️⃣ Configurar conexão
-
-Arquivo:
-
-Login/config.php
-
-Exemplo:
-
-$conexao = new mysqli("localhost","root","","cadastro");
-5️⃣ Executar o projeto
-
-Abra no navegador:
-
-http://localhost/planteapp
-🔎 Sistema de busca
-
-O sistema possui uma busca dinâmica utilizando Fetch API, que atualiza os resultados sem recarregar a página.
-
-A busca funciona por:
-
-nome da planta
-
-descrição
-
-tipo
-
-📱 Como funciona a negociação
-
-Usuário publica uma planta
-
-Outro usuário encontra a planta no feed
-
-Clica em Negociar
-
-O sistema mostra:
-
-telefone
-
-descrição
-
-tipo
-
-foto
-
-preço ou item de troca
-
-O contato é feito fora do site.
-
-🌿 Objetivo do projeto
-
-O PlanteApp foi desenvolvido com o objetivo de:
-
-Incentivar cultivo urbano
-
-Estimular troca de plantas
-
-Promover sustentabilidade
-
-Facilitar o acesso a mudas
+Desenvolvido por Duck101X 🚀
